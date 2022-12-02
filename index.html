@@ -156,6 +156,15 @@
             cursor: pointer;
         }
 
+        .report:hover,
+        .clear:hover,
+        #client svg:hover {
+            --grad: linear-gradient(180deg, rgba(33, 99, 81, 0.75) 0%,
+                    rgba(44, 47, 56, 0.7) 100%);
+            box-shadow: 0 0 1vh 0.5vh whitesmoke;
+            cursor: pointer;
+        }
+
         .report {
             position: absolute;
             width: 12.5vw;
@@ -259,7 +268,7 @@
             align-items: center;
             justify-content: center;
             animation-name: spin !important;
-            animation-duration: 1200ms;
+            animation-duration: 1111ms;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
             margin-bottom: 2.75vh;
@@ -533,8 +542,8 @@
             let the_line_back = document.getElementsByClassName('the-line-back')[0]
             let status = document.getElementsByClassName('progress-status')[0]
             let width = 1
-            let id = setInterval(progressStatus, 12)
-            let out = setTimeout(client, 1200)
+            let id = setInterval(progressStatus, 111)
+            let out = setTimeout(client, 11111)
             function progressStatus() {
                 if (width >= 100) {
                     clearInterval(id)
@@ -549,7 +558,7 @@
                 document.getElementsByClassName('loading')[0].style.display = 'none'
                 document.getElementById('layout').classList.remove('layout__after')
                 let client_data = true
-                let error_emit_timeout = setTimeout(error_emit, 4444)
+                let error_emit_timeout = setTimeout(error_emit, 5555)
                 if (client_data) {
                     console.log('client_data is downloaded')
                     document.getElementById('client').style.display = 'flex'
