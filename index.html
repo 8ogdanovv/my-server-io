@@ -146,7 +146,7 @@
         }
 
         .myserver {
-            margin-top: 8%;
+            margin-top: 7%;
             margin-bottom: 0.25vh;
             line-height: 2.5vh;
             font-size: 2.5vh;
@@ -163,14 +163,22 @@
             cursor: pointer;
         }
 
-        .report:hover,
-        .clear:hover,
-        #client svg:hover {
-            --grad: linear-gradient(180deg, rgba(33, 99, 81, 0.75) 0%,
-                    rgba(44, 47, 56, 0.7) 100%);
+        .clear:hover {
             box-shadow: 0 0 1vh 0.5vh whitesmoke;
             cursor: pointer;
         }
+
+        .report:hover {
+            box-shadow: 0 0 1vh 0.5vh  rgba(255, 191, 67, 1);
+            cursor: pointer;
+        }
+
+        #client svg:hover {
+            box-shadow: 0 0 1vh 0.5 rgb(18, 217, 131);
+            cursor: pointer;
+        }
+
+
 
         .report {
             position: absolute;
@@ -195,7 +203,7 @@
 
         footer {
             position: absolute;
-            top: 90%;
+            top: 95%;
             height: 4%;
 
             width: 100%;
@@ -413,7 +421,7 @@
             }
 
             .myserver {
-                margin-top: 10%;
+                margin-top: 7%;
             }
         }
 
@@ -517,6 +525,11 @@
     top: 4vw;
 }
 
+}
+
+.client,
+.loading {
+    overflow: hidden;
 }
     </style>
 
