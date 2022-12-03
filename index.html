@@ -186,7 +186,7 @@
         footer {
             position: absolute;
             line-height: 1vh;
-            top: 95vh;
+            top: 92vh;
             height: 4.5vh;
             bottom: 0.5vh;
             width: 100%;
@@ -328,7 +328,7 @@
                 position: absolute;
                 width: 25vw;
                 height: 4.35vh;
-                top:88vh;
+                top:85vh;
                 font-size: 3.4vh;
                 display: none;
             }
@@ -341,7 +341,8 @@
                 margin-right: 0.6vw;
             }
             .client {
-                bottom: 10vh;
+                top:10vh;
+                bottom: 21vh;
             }
         }
 
@@ -389,7 +390,7 @@
             .report {
                 width: 25vh;
                 height: 4.35vh;
-                top: 88vh;
+                top: 85vh;
                 font-size: 3.4vh;
                 display: none;
             }
@@ -417,7 +418,7 @@
             .report {
                 width: 25vh;
                 height: 4.35vh;
-                top: 88vh;
+                top: 85vh;
                 font-size: 3.4vh;
                 display: none;
             }
@@ -577,8 +578,8 @@
             let the_line_back = document.getElementsByClassName('the-line-back')[0]
             let status = document.getElementsByClassName('progress-status')[0]
             let width = 1
-            let id = setInterval(progressStatus, 11)
-            let out = setTimeout(client, 1111)
+            let id = setInterval(progressStatus, 111)
+            let out = setTimeout(client, 11155)
             function progressStatus() {
                 if (width >= 100) {
                     clearInterval(id)
@@ -593,7 +594,7 @@
                 document.getElementsByClassName('loading')[0].style.display = 'none'
                 document.getElementById('layout').classList.remove('layout__after')
                 let client_data = true
-                let error_emit_timeout = setTimeout(error_emit, 555)
+                let error_emit_timeout = setTimeout(error_emit, 4444)
                 if (client_data) {
                     console.log('client_data is downloaded')
                     document.getElementById('client').style.display = 'flex'
