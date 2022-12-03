@@ -26,7 +26,7 @@
         h1 {
             width: 100%;
             font-weight: 900;
-            font-size: 5.5vh;
+            /* font-size: 5.5vh; */
             text-align: center;
         }
 
@@ -370,7 +370,7 @@
 
             .client {
                 width: 75vw;
-                height: 69vh;
+                height: 75vh;
             }
 
             #client svg {
@@ -425,7 +425,7 @@
 
             .myserver-bottom {
                 position: absolute;
-                bottom: 6vh;
+                top: 90vh;
             }
 
             .clear {
@@ -436,7 +436,7 @@
             }
 
             #client svg {
-                top: 8vh;
+                top: 10vh;
                 right: 5vw;
                 transform: scale(1.5);
                 color: var(--color);
@@ -453,6 +453,47 @@
             }
 
         }
+
+        @media (orientation: landscape) {
+            
+            h1 {
+                font-size: 5vh !important;
+            }
+            
+            .loading h1 {
+  
+                margin-bottom: -4vh;
+            }
+
+            .error p {
+                font-size: 1vw;
+                line-height: 1.5vw;
+            }
+
+            .animation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: spin !important;
+            animation-duration: 1111ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            margin-bottom: -3vh;
+            margin-top: 1vh;
+        }
+
+        #client svg {
+            top: 14vh;
+        }
+
+        .client {
+            height: 75vh;
+        }
+
+
+
+        }
+
     </style>
 
 </head>
@@ -578,8 +619,8 @@
             let the_line_back = document.getElementsByClassName('the-line-back')[0]
             let status = document.getElementsByClassName('progress-status')[0]
             let width = 1
-            let id = setInterval(progressStatus, 111)
-            let out = setTimeout(client, 11155)
+            let id = setInterval(progressStatus, 11)
+            let out = setTimeout(client, 1115)
             function progressStatus() {
                 if (width >= 100) {
                     clearInterval(id)
@@ -594,7 +635,7 @@
                 document.getElementsByClassName('loading')[0].style.display = 'none'
                 document.getElementById('layout').classList.remove('layout__after')
                 let client_data = true
-                let error_emit_timeout = setTimeout(error_emit, 4444)
+                let error_emit_timeout = setTimeout(error_emit, 1444)
                 if (client_data) {
                     console.log('client_data is downloaded')
                     document.getElementById('client').style.display = 'flex'
