@@ -338,6 +338,24 @@
 
         @media screen and (max-width: 1090px) {
 
+            .layout {
+
+            width: 65vw;
+            height: 57vh;
+        }
+
+        .layout__after::before{
+            content: '';
+            position: relative;
+            width: 65vw;
+            height: 57vh;
+    
+        }
+
+        .loading h1 {
+            font-size: 7vw;
+        }
+
             .client {
                 width: 75vw;
             }
@@ -542,8 +560,8 @@
             let the_line_back = document.getElementsByClassName('the-line-back')[0]
             let status = document.getElementsByClassName('progress-status')[0]
             let width = 1
-            let id = setInterval(progressStatus, 111)
-            let out = setTimeout(client, 11111)
+            let id = setInterval(progressStatus, 11)
+            let out = setTimeout(client, 1111)
             function progressStatus() {
                 if (width >= 100) {
                     clearInterval(id)
@@ -558,7 +576,7 @@
                 document.getElementsByClassName('loading')[0].style.display = 'none'
                 document.getElementById('layout').classList.remove('layout__after')
                 let client_data = true
-                let error_emit_timeout = setTimeout(error_emit, 5555)
+                let error_emit_timeout = setTimeout(error_emit, 555)
                 if (client_data) {
                     console.log('client_data is downloaded')
                     document.getElementById('client').style.display = 'flex'
