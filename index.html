@@ -18,9 +18,19 @@
             height: 100%;
             background-color: #1b1c20;
             color: white;
+            overflow: hidden;
+        }
+
+        body:before {
+            content: "";
             background-image: url('./bg-tile_transp.png');
             background-position: center;
-            overflow: hidden;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.25;
         }
 
         h1 {
@@ -89,8 +99,8 @@
 
         .error-color {
             background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(94, 21, 77, 0.5) 0%,
-                    rgba(40, 28, 178, 0.1) 100%);
+            background: linear-gradient(180deg, rgba(94, 21, 77, 1) 0%,
+                    rgba(40, 28, 178, 0.5) 100%);
             color: rgba(248, 34, 106, 1);
         }
 
@@ -107,6 +117,7 @@
 
         .error p {
             margin-left: 1vw;
+            font-weight: 700;
         }
 
         .loading-bg {
@@ -116,7 +127,7 @@
         }
 
         .loading-color {
-      
+
             background: rgb(255, 255, 255);
             background: linear-gradient(180deg, rgba(33, 99, 81, 0.75) 0%,
                     rgba(44, 47, 56, 0.7) 100%);
@@ -124,18 +135,18 @@
         }
 
         .loading-wrapper {
-      
-      background: rgb(255, 255, 255);
-      background: linear-gradient(180deg,  rgba(44, 47, 56, 0.7)0%,
-      rgba(33, 99, 81, 0.75)   100%);
-    
-  }
 
-  .error-wrapper{
-    background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(94, 21, 77, 0.66) 0%, 
+            background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(44, 47, 56, 0.7)0%,
+                    rgba(33, 99, 81, 0.75) 100%);
+
+        }
+
+        .error-wrapper {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(94, 21, 77, 0.66) 0%,
                     rgba(40, 28, 178, 0.1) 50%, rgba(248, 34, 106, 0.35) 100%);
-  }
+        }
 
         .loading {
             height: 100%;
@@ -169,7 +180,7 @@
         }
 
         .report:hover {
-            box-shadow: 0 0 1vh 0.5vh  rgba(255, 191, 67, 1);
+            box-shadow: 0 0 1vh 0.5vh rgba(255, 191, 67, 1);
             cursor: pointer;
         }
 
@@ -215,7 +226,7 @@
 
         .build {
             position: absolute;
-   
+
             left: 1vw;
         }
 
@@ -521,16 +532,16 @@
         @media screen and (min-width: 1090px) and (orientation: landscape) {
 
 
-#client svg {
-    top: 4vw;
-}
+            #client svg {
+                top: 4vw;
+            }
 
-}
+        }
 
-.client,
-.loading {
-    overflow: hidden;
-}
+        .client,
+        .loading {
+            overflow: hidden;
+        }
     </style>
 
 </head>
