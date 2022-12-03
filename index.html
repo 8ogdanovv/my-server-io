@@ -26,14 +26,13 @@
         h1 {
             width: 100%;
             font-weight: 900;
-            /* font-size: 5.5vh; */
             text-align: center;
         }
 
         .wrapper {
             width: 100%;
             height: 100vh;
-       
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -64,12 +63,9 @@
             clip-path: polygon(var(--path));
         }
 
-        .layout__after::before{
+        .layout__after::before {
             content: '';
             position: relative;
-            /* bottom: 17.5vh;
-            left: 16.4vw;
-            right: 16.3vw; */
             width: 65vw;
             height: 65vh;
             overflow: hidden;
@@ -105,6 +101,7 @@
                     rgba(0, 0, 0, 0.5) 50%,
                     rgba(77, 54, 80, 0.9) 100%);
         }
+
         .error {
             display: flex;
             flex-direction: column;
@@ -166,7 +163,7 @@
             position: absolute;
             width: 12.5vw;
             height: 4.35vh;
-            top:85vh;
+            top: 85vh;
             background-color: rgba(255, 201, 137, 0.50);
             color: rgba(255, 191, 67, 1);
             font-size: 3.4vh;
@@ -328,7 +325,7 @@
                 position: absolute;
                 width: 25vw;
                 height: 4.35vh;
-                top:85vh;
+                top: 85vh;
                 font-size: 3.4vh;
                 display: none;
             }
@@ -340,8 +337,9 @@
                 height: 3.2vh;
                 margin-right: 0.6vw;
             }
+
             .client {
-                top:10vh;
+                top: 10vh;
                 bottom: 21vh;
             }
         }
@@ -349,24 +347,21 @@
         @media screen and (max-width: 1090px) {
 
             .layout {
+                width: 65vw;
+                height: 57vh;
+                margin-bottom: 3vh;
+            }
 
-            width: 65vw;
-            height: 57vh;
-            margin-bottom: 3vh;
-        }
+            .layout__after::before {
+                content: '';
+                position: relative;
+                width: 65vw;
+                height: 57vh;
+            }
 
-        .layout__after::before{
-            content: '';
-            position: relative;
-            width: 65vw;
-            height: 57vh;
-            /* margin-bottom: 3vh; */
-    
-        }
-
-        .loading h1 {
-            font-size: 7vw;
-        }
+            .loading h1 {
+                font-size: 7vw;
+            }
 
             .client {
                 width: 75vw;
@@ -403,7 +398,7 @@
             }
 
             .myserver {
-            margin-top: 7vh;
+                margin-top: 7vh;
             }
         }
 
@@ -426,7 +421,7 @@
             .myserver-bottom {
                 position: absolute;
                 margin: 0;
-                top: 90vh;
+                top: 3vh;
             }
 
 
@@ -457,13 +452,13 @@
         }
 
         @media (orientation: landscape) {
-            
+
             h1 {
                 font-size: 5vh !important;
             }
-            
+
             .loading h1 {
-  
+
                 margin-bottom: -4vh;
             }
 
@@ -473,29 +468,26 @@
             }
 
             .animation {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation-name: spin !important;
-            animation-duration: 1111ms;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            margin-bottom: -3vh;
-            margin-top: 1vh;
-        }
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation-name: spin !important;
+                animation-duration: 1111ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                margin-bottom: -3vh;
+                margin-top: 1vh;
+            }
 
-        #client svg {
-            top: 14vh;
-        }
+            #client svg {
+                top: 14vh;
+            }
 
-        .client {
-            height: 75vh;
-        }
-
-
+            .client {
+                height: 75vh;
+            }
 
         }
-
     </style>
 
 </head>
@@ -601,11 +593,13 @@
         <button id="report" class="report">send report</button>
 
         <footer>
-            
+
             <div class="build">
                 <p>Build 0.1.0 - w695.567</p>
             </div>
+
             <div><button class="clear">Clear Index</button></div>
+
             <footer>
 
     </div>
@@ -621,9 +615,13 @@
             let the_line_back = document.getElementsByClassName('the-line-back')[0]
             let status = document.getElementsByClassName('progress-status')[0]
             let width = 1
-            let id = setInterval(progressStatus, 11)
-            let out = setTimeout(client, 1115)
+
+            let id = setInterval(progressStatus, 111)
+
+            let out = setTimeout(client, 11555)
+
             function progressStatus() {
+
                 if (width >= 100) {
                     clearInterval(id)
                 } else {
@@ -633,23 +631,28 @@
                     status.innerHTML = (width * 1.5).toFixed(1) + 'Mb / 150 Mb' + `     [<span style="color:rgb(245,11,209)">${width * 1}%</span>]`
                 }
             }
+
             function client() {
+
                 document.getElementsByClassName('loading')[0].style.display = 'none'
                 document.getElementById('layout').classList.remove('layout__after')
+
                 let client_data = true
-                let error_emit_timeout = setTimeout(error_emit, 1444)
+
+                let error_emit_timeout = setTimeout(error_emit, 4444)
+
                 if (client_data) {
                     console.log('client_data is downloaded')
                     document.getElementById('client').style.display = 'flex'
                     document.getElementsByClassName('myserver')[0].classList.add('myserver-bottom')
                 } else {
-                    // document.getElementById('layout').classList.add('layout')
                     document.getElementsByClassName('loading')[0].style.display = 'none'
                     document.getElementsByClassName('myserver')[0].classList.remove('myserver-bottom')
                     document.getElementById('error').style.display = 'flex'
                     document.getElementById('report').style.display = 'block'
                 }
             }
+
             function error_emit() {
 
                 document.getElementById('layout').classList.add('layout__after')
