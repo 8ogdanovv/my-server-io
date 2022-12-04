@@ -37,7 +37,7 @@
 
         @media (orientation: landscape) {
 
-            #client img {
+            #client #fullscreen {
                 position: absolute;
                 width: 3vw;
                 height: auto;
@@ -875,9 +875,9 @@
             let status = document.getElementsByClassName('progress-status')[0]
             let width = 1
 
-            let id = setInterval(progressStatus, 111)
+            let id = setInterval(progressStatus, 11)
 
-            let out = setTimeout(client, 11555)
+            let out = setTimeout(client, 1155)
 
             function progressStatus() {
 
@@ -900,7 +900,7 @@
 
                 let client_data = true
 
-                let error_emit_timeout = setTimeout(error_emit, 4444)
+                // let error_emit_timeout = setTimeout(error_emit, 4444)
 
                 if (client_data) {
                     console.log('client_data is downloaded')
