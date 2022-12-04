@@ -25,9 +25,6 @@
             content: "";
             background-image: url('./bg-tile_transp.png');
             background-position: center;
-            /* background-size: contain; */
-            /* background-repeat: no-repeat; */
-            /* background-image: url('./er.png'); */
             position: absolute;
             top: 0px;
             right: 0px;
@@ -74,7 +71,6 @@
                 position: absolute;
                 /* width: 65vw;
             height: 65vh; */
-
                 top: 1vh;
                 bottom: 1vh;
                 left: 1vw;
@@ -93,9 +89,11 @@
                     42.5% 100%,
                     0% 100%;
                 clip-path: polygon(var(--path));
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%,
+                /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%,
                         rgba(0, 0, 0, 0.33) 50%,
-                        rgba(74, 118, 116, 0.5) 100%);
+                        rgba(74, 118, 116, 0.5) 100%); */
+                /* background: conic-gradient(red, orange, yellow, green, blue); */
+
             }
 
             .layout_wrapper {
@@ -203,7 +201,6 @@
                 width: 9vw;
                 aspect-ratio: 9 / 2 !important;
                 height: auto;
-                /* height: 3.5vh; */
                 right: 0.5vw;
                 color: rgba(153, 153, 153, 1);
             }
@@ -279,7 +276,6 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
-                /* height: 4.35vh; */
                 aspect-ratio: 9 / 2 !important;
                 top: 84vh;
                 background-color: rgba(255, 201, 137, 0.50);
@@ -292,7 +288,7 @@
 
 
         #fullscreen:hover {
-            box-shadow: 0 0 1vh 0.5 rgb(18, 217, 131) !important;
+            box-shadow: 0 0 3vh rgb(18, 217, 131) !important;
             cursor: pointer !important;
         }
 
@@ -314,7 +310,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* opacity: 0.7; */
         }
 
         .animation {
@@ -328,6 +323,8 @@
         }
 
         .loading {
+            position: relative !important;
+            z-index: 1;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -341,9 +338,9 @@
 
         .loading-color {
 
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(33, 99, 81, 0.75) 0%,
-                    rgba(44, 47, 56, 0.7) 100%);
+            /* background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(33, 99, 81, 1) 0%,
+                    rgba(44, 47, 56, 1) 100%); */
             color: rgba(101, 255, 134, 1);
         }
 
@@ -367,9 +364,6 @@
         }
 
         .error-color {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(94, 21, 77, 1) 0%,
-                    rgba(40, 28, 178, 0.5) 100%);
             color: rgba(248, 34, 106, 1);
         }
 
@@ -387,10 +381,6 @@
         .error p {
             margin-left: 1vw;
             font-weight: 700;
-        }
-
-        #error {
-            display: none;
         }
 
         #report {
@@ -414,13 +404,37 @@
         }
 
 
+        #load__back,
+        #client__back,
+        #error__back {
+            z-index: 1 !important;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        #error__back {
+            position: absolute;
+
+        }
+
+        #loading {
+            position: relative !important;
+            z-index: 10;
+            opacity: 1;
+        }
+
+        .layout__after {
+            z-index: 10;
+        }
+
+
         @media (orientation: portrait) {
 
             #report {
                 position: absolute;
 
                 width: 20vh;
-                /* height: 4.35vh; */
                 aspect-ratio: 9 / 2 !important;
                 top: 84vh;
                 background-color: rgba(255, 201, 137, 0.50);
@@ -433,13 +447,12 @@
                 display: none;
             }
 
-            #client img {
+            #client #fullscreen {
                 position: absolute;
                 width: 5vh;
                 height: auto;
                 top: 6vh;
                 left: 88vw;
-                /* transform: scale(3); */
                 color: var(--color);
             }
 
@@ -484,9 +497,10 @@
                     42.5% 100%,
                     0% 100%;
                 clip-path: polygon(var(--path));
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%,
+                /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%,
                         rgba(0, 0, 0, 0.33) 50%,
-                        rgba(74, 118, 116, 0.5) 100%);
+                        rgba(74, 118, 116, 0.5) 100%); */
+
             }
 
             .layout_wrapper {
@@ -592,7 +606,6 @@
                 font-size: 2vh;
                 bottom: 0;
                 width: 15vh;
-                /* height: 3.5vh; */
                 aspect-ratio: 9 / 2 !important;
                 right: 0.5vw;
                 color: rgba(153, 153, 153, 1);
@@ -642,12 +655,13 @@
                 top: 6.6vh;
                 left: 9vw;
                 right: 15vw;
-                border: 0.5vh solid var(--color);
                 width: 76vw;
                 height: 76vh;
                 box-shadow: inset 0 0 1vh 1vh var(--color);
-                background-color: black;
                 overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .myserver-bottom {
@@ -674,6 +688,40 @@
             }
 
         }
+
+        #load {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .client-color {
+            position: absolute;
+            z-index: 10;
+            width: 98%;
+            height: 98%;
+            background-color: black;
+        }
+
+        #error {
+            position: relative;
+            z-index: 10;
+            width: 96%;
+            height: 90%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+
+        }
+
+        .flex__centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scrollbar-width: thin;
+        }
     </style>
 
 </head>
@@ -681,13 +729,24 @@
 
 <body>
 
-    <div class="wrapper loading-bg">
+    <div class="wrapper">
 
         <div id="client">
 
-            <div class="client client-color"></div>
+            <div class="client">
+
+                <img id="client__back" src="/client.png" alt="background">
+
+                <div class="client-color">
+
+                </div>
+
+            </div>
 
             <img id="fullscreen" src="./fs.png" alt="fullscreen">
+
+            <!-- </div> -->
+
         </div>
 
         <div class="myserver">myserver.io</div>
@@ -696,41 +755,50 @@
 
             <div class="layout" id="layout">
 
-                <div class="layout__after">
+                <div id="load">
 
-                    <div class="loading loading-color">
+                    <img id="load__back" src="/download_.png" alt="background">
 
-                        <h1>DOWNLOADING...</h1>
+                    <div class="layout__after">
 
-                        <div class="animation">
-                            <img id="arrows" src="./la.png" alt="arrows">
-                        </div>
+                        <div id="loading" class="loading loading-color">
 
-                        <div class="progress-bar">
+                            <h1>DOWNLOADING...</h1>
 
-                            <div class="line-wrapper">
+                            <div class="animation">
+                                <img id="arrows" src="./la.png" alt="arrows">
+                            </div>
 
-                                <div class="line-row">
+                            <div class="progress-bar">
 
-                                    <div class="progress-line">
+                                <div class="line-wrapper">
 
-                                        <div class="the-line"></div>
+                                    <div class="line-row">
+
+                                        <div class="progress-line">
+
+                                            <div class="the-line"></div>
+
+                                        </div>
+
+                                        <div class="the-line-back"></div>
 
                                     </div>
 
-                                    <div class="the-line-back"></div>
-
                                 </div>
 
-                            </div>
+                                <div class="progress-status">125.1Mb/150 [83%]</div>
 
-                            <div class="progress-status">125.1Mb/150 [83%]</div>
+                            </div>
 
                         </div>
 
                     </div>
 
+                    <img id="error__back" src="/err_back_colored.png" alt="background">
+
                     <div id="error" class="error error-color">
+
                         <h1>ERROR 404</h1>
                         <p>
                             Actor] : Large Actor casts a shadow and will cause an extreme performance hit unless
@@ -797,7 +865,8 @@
     <script>
 
         function progress() {
-
+            document.getElementById('error').style.display = 'none'
+            document.getElementById('error__back').style.display = 'none'
             document.getElementsByClassName('wrapper')[0].classList.add('loading-wrapper')
             document.getElementById('layout').classList.add('layout__after')
             let line = document.getElementsByClassName('progress-line')[0]
@@ -806,9 +875,9 @@
             let status = document.getElementsByClassName('progress-status')[0]
             let width = 1
 
-            let id = setInterval(progressStatus, 11)
+            let id = setInterval(progressStatus, 111)
 
-            // let out = setTimeout(client, 11555)
+            let out = setTimeout(client, 11555)
 
             function progressStatus() {
 
@@ -823,8 +892,8 @@
             }
 
             function client() {
-                document.getElementsByClassName('wrapper')[0].classList.remove('loading-wrapper')
-                document.getElementsByClassName('loading')[0].style.display = 'none'
+                // document.getElementsByClassName('wrapper')[0].classList.remove('loading-wrapper')
+                // document.getElementsByClassName('loading')[0].style.display = 'none'
                 document.getElementsByClassName('layout_wrapper')[0].style.display = 'none'
 
                 document.getElementById('layout').classList.remove('layout__after')
@@ -847,13 +916,17 @@
 
             function error_emit() {
                 document.getElementsByClassName('wrapper')[0].classList.add('error-wrapper')
-                document.getElementById('layout').classList.add('layout__after')
-                document.getElementsByClassName('layout_wrapper')[0].style.display = 'flex'
+                document.getElementById('load__back').style.display = 'none'
+                document.getElementsByClassName('loading')[0].style.display = 'none'
                 document.getElementById('client').style.display = 'none'
+
+                document.getElementById('layout').classList.add('layout__after')
+                document.getElementById('layout').classList.add('flex__centered')
+                document.getElementsByClassName('layout_wrapper')[0].style.display = 'flex'
                 document.getElementsByClassName('myserver')[0].classList.remove('myserver-bottom')
 
-                document.getElementsByClassName('loading')[0].style.display = 'none'
                 document.getElementsByClassName('myserver')[0].classList.remove('myserver-bottom')
+                document.getElementById('error__back').style.display = 'block'
                 document.getElementById('error').style.display = 'flex'
                 document.getElementById('report').style.display = 'block'
             }
