@@ -25,6 +25,9 @@
             content: "";
             background-image: url('./bg-tile_transp.png');
             background-position: center;
+            /* background-size: contain; */
+            /* background-repeat: no-repeat; */
+            /* background-image: url('./er.png'); */
             position: absolute;
             top: 0px;
             right: 0px;
@@ -33,11 +36,277 @@
             opacity: 0.25;
         }
 
-        h1 {
-            width: 100%;
-            font-weight: 900;
-            text-align: center;
+
+
+        @media (orientation: landscape) {
+
+            #client img {
+            position: absolute;
+            width: 3vw;
+            height: auto;
+            top: 6vh;
+            left: 92vw;
+            /* transform: scale(3); */
+            color: var(--color);
         }
+
+            .layout {
+                position: relative;
+
+                width: 65.8vw;
+                height: 65.2vh;
+                --path: 0% 0%,
+                    42.5% 0%,
+                    45% 2.5%,
+                    55% 2.5%,
+                    57.5% 0%,
+                    100% 0%,
+                    100% 100%,
+                    57.5% 100%,
+                    55% 97.5%,
+                    45% 97.5%,
+                    42.5% 100%,
+                    0% 100%;
+                clip-path: polygon(var(--path));
+            }
+
+            .layout__after {
+                position: absolute;
+                /* width: 65vw;
+            height: 65vh; */
+
+                top: 1vh;
+                bottom: 1vh;
+                left: 1vw;
+                right: 1vw;
+
+                --path: 0% 0%,
+                    42.5% 0%,
+                    45% 2.5%,
+                    55% 2.5%,
+                    57.5% 0%,
+                    100% 0%,
+                    100% 100%,
+                    57.5% 100%,
+                    55% 97.5%,
+                    45% 97.5%,
+                    42.5% 100%,
+                    0% 100%;
+                clip-path: polygon(var(--path));
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%,
+                        rgba(0, 0, 0, 0.33) 50%,
+                        rgba(74, 118, 116, 0.5) 100%);
+            }
+
+            .layout_wrapper {
+
+                position: absolute;
+                top: 14.75vh;
+                right: 18.2vw;
+                bottom: 20.05vh;
+                left: 16vw;
+                width: 65.8vw;
+                height: 65.2vh;
+
+            }
+
+            .loading h1 {
+                margin-top: 16vh;
+                width: 100%;
+                font-weight: 900;
+                text-align: center;
+                font-size: 5vh;
+            }
+
+            .progress-bar {
+                margin-top: 2.2vh;
+                width: 100%;
+                height: 2vh;
+            }
+
+            .line-wrapper {
+                width: 62%;
+                margin: 0 19%;
+            }
+
+            .progress-line {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 10vh;
+                background: linear-gradient(90deg, rgba(255, 252, 2, 0) 0%,
+                        rgba(255, 252, 2, 0) 100%);
+            }
+
+            .the-line {
+                z-index: 2;
+                width: auto;
+                height: 1.75vh;
+                background-color: rgb(255, 252, 2);
+            }
+
+            .the-line-back {
+                z-index: 1;
+                width: auto;
+                height: 1.75vh;
+                background-color: rgb(18, 19, 22);
+            }
+
+            .line-row {
+                display: flex;
+                width: auto;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .progress-status {
+                position: relative;
+                /* line-height: 4vh; */
+                font-size: 2.8vh;
+                margin-top: -1.5vh;
+                letter-spacing: 0.1vw;
+                text-shadow: 0px 0px 3px whitesmoke;
+                z-index: 10 !important;
+                color: rgb(251, 251, 251);
+                width: 100%;
+                text-align: center;
+            }
+
+            .myserver {
+                position: absolute;
+                top: 14vh;
+                margin-bottom: 0.25vh;
+                line-height: 2.5vh;
+                font-size: 2.5vh;
+                width: 100%;
+                text-align: center;
+                color: rgba(9, 217, 255, 1);
+            }
+
+            #arrows {
+                height: 7.5vh;
+            }
+
+            .animation {
+                margin-top: 3vh;
+            }
+
+            .clear {
+                background-image: url(./clear.png) !important;
+                background-size: contain !important;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                font-size: 2vh;
+                bottom: 0;
+                width: 9vw;
+                /* height: 3.5vh; */
+                aspect-ratio: 9 /2 !important;
+                right: 0.5vw;
+                color: rgba(153, 153, 153, 1);
+            }
+
+            footer {
+                position: absolute;
+                top: 95%;
+                height: 4%;
+
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .build {
+                position: absolute;
+
+                left: 1vw;
+                top: 0.5vh;
+            }
+
+            .build p {
+                font-size: 1em;
+                line-height: 1em;
+                z-index: 10;
+                color: rgba(77, 54, 80, 0.44);
+                text-shadow: 0 0 1px white;
+            }
+
+            .report,
+            .clear {
+                background: transparent;
+                color: whitesmoke;
+                cursor: pointer;
+            }
+
+            .clear:hover {
+                box-shadow: 0 0 1vh 0.5vh whitesmoke;
+                cursor: pointer;
+            }
+
+            .client {
+                position: absolute;
+                top: 6.6vh;
+                left: 9vw;
+                right: 9vw;
+                border: 0.5vh solid var(--color);
+                width: 82vw;
+                height: 82vh;
+                box-shadow: inset 0 0 1vh 1vh var(--color);
+                background-color: black;
+                overflow: hidden;
+            }
+
+            .myserver-bottom {
+                position: absolute;
+                top: 96.5vh;
+                bottom: 1vh;
+            }
+
+            #error h1 {
+                text-align: center;
+                font-size: 5vh;
+                margin-bottom: 1vh;
+            }
+
+            .report {
+                position: absolute;
+                width: 12.5vw;
+                background-image: url('/clear.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                /* height: 4.35vh; */
+                aspect-ratio: 9 / 2  !important;
+                top: 84vh;
+                background-color: rgba(255, 201, 137, 0.50);
+                color: rgba(255, 191, 67, 1);
+                font-size: 3.4vh;
+                display: none;
+            }
+
+        }
+
+
+        #fullscreen:hover {
+            z-index: 5;
+            box-shadow: 0 0 1vh 0.5 rgb(18, 217, 131) !important;
+            cursor: pointer !important;
+        }
+
+
+        @keyframes spin {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
 
         .wrapper {
             width: 100%;
@@ -45,78 +314,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            /* opacity: 0.7; */
         }
 
-        .layout {
-            margin-bottom: 17.5vh;
-            margin-left: 17.5vw;
-            margin-right: 17.5vw;
-            width: 65vw;
-            height: 65vh;
-            overflow: hidden;
-            overflow-y: auto;
-            --path: 0% 0%,
-                42.5% 0%,
-                45% 2.5%,
-                55% 2.5%,
-                57.5% 0%,
-                100% 0%,
-                100% 100%,
-                57.5% 100%,
-                55% 97.5%,
-                45% 97.5%,
-                42.5% 100%,
-                0% 100%;
-            clip-path: polygon(var(--path));
+        .animation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: spin !important;
+            animation-duration: 1111ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
 
-        .layout__after::before {
-            content: '';
-            position: relative;
-            width: 65vw;
-            height: 65vh;
-            overflow: hidden;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            --path: 0% 0%,
-                42.5% 0%,
-                45% 2.5%,
-                55% 2.5%,
-                57.5% 0%,
-                100% 0%,
-                100% 100%,
-                57.5% 100%,
-                55% 97.5%,
-                45% 97.5%,
-                42.5% 100%,
-                0% 100%;
-            clip-path: polygon(var(--path));
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0.33) 0%,
-                    rgba(0, 0, 0, 0.33) 50%,
-                    rgba(74, 118, 116, 0.5) 100%);
-        }
-
-        .error-color {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(94, 21, 77, 1) 0%,
-                    rgba(40, 28, 178, 0.5) 100%);
-            color: rgba(248, 34, 106, 1);
-        }
-
-        .error-bg {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%,
-                    rgba(0, 0, 0, 0.5) 50%,
-                    rgba(77, 54, 80, 0.9) 100%);
-        }
-
-        .error {
+        .loading {
+            height: 100%;
             display: flex;
             flex-direction: column;
-        }
-
-        .error p {
-            margin-left: 1vw;
-            font-weight: 700;
         }
 
         .loading-bg {
@@ -147,134 +361,32 @@
                     rgba(40, 28, 178, 0.1) 50%, rgba(248, 34, 106, 0.35) 100%);
         }
 
-        .loading {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .myserver {
-            margin-top: 7%;
-            margin-bottom: 0.25vh;
-            line-height: 2.5vh;
-            font-size: 2.5vh;
-            width: 100%;
-            text-align: center;
-            color: rgba(9, 217, 255, 1);
-        }
-
-        .report,
-        .clear {
-            background: transparent;
-            border: 1px dashed white;
-            color: whitesmoke;
-            cursor: pointer;
-        }
-
-        .clear:hover {
-            box-shadow: 0 0 1vh 0.5vh whitesmoke;
-            cursor: pointer;
-        }
-
         .report:hover {
             box-shadow: 0 0 1vh 0.5vh rgba(255, 191, 67, 1);
             cursor: pointer;
         }
 
-        #client svg:hover {
-            box-shadow: 0 0 1vh 0.5 rgb(18, 217, 131);
-            cursor: pointer;
+        .error-color {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(94, 21, 77, 1) 0%,
+                    rgba(40, 28, 178, 0.5) 100%);
+            color: rgba(248, 34, 106, 1);
         }
 
-
-
-        .report {
-            position: absolute;
-            width: 12.5vw;
-            height: 4.35vh;
-            top: 88vh;
-            background-color: rgba(255, 201, 137, 0.50);
-            color: rgba(255, 191, 67, 1);
-            font-size: 3.4vh;
-            display: none;
+        .error-bg {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%,
+                    rgba(0, 0, 0, 0.5) 50%,
+                    rgba(77, 54, 80, 0.9) 100%);
         }
 
-        .clear {
-            position: absolute;
-            font-size: 1.5rem;
-            bottom: 0;
-            width: 15vw;
-            height: 3vw;
-            right: 1rem;
-            color: rgba(153, 153, 153, 1);
-        }
-
-        footer {
-            position: absolute;
-            top: 95%;
-            height: 4%;
-
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .build {
-            position: absolute;
-
-            left: 1vw;
-        }
-
-        .build p {
-            font-size: 1em;
-            line-height: 1em;
-            z-index: 10;
-            color: rgba(77, 54, 80, 0.44);
-            text-shadow: 0 0 1px white;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 5vh;
-        }
-
-        .line-wrapper {
-            width: 75%;
-            margin: 0 12.5%;
-        }
-
-        .progress-line {
+        .error {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            height: 10vh;
-            background: linear-gradient(90deg, rgba(255, 252, 2, 0) 0%,
-                    rgba(255, 252, 2, 0) 100%);
         }
 
-        .the-line {
-            z-index: 2;
-            width: auto;
-            height: 2vh;
-            background-color: rgb(255, 252, 2);
-        }
-
-        .the-line-back {
-            z-index: 1;
-            width: auto;
-            height: 2vh;
-            background-color: rgb(18, 19, 22);
-        }
-
-        .line-row {
-            display: flex;
-            width: auto;
-            justify-content: center;
-            align-items: center;
+        .error p {
+            margin-left: 1vw;
+            font-weight: 700;
         }
 
         #error {
@@ -289,266 +401,278 @@
             display: none;
         }
 
-        @keyframes spin {
-            0% {
-                transform: rotate(0);
-            }
 
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .animation {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation-name: spin !important;
-            animation-duration: 1111ms;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            margin-bottom: 2.75vh;
-            margin-top: 7vh;
-        }
-
-        .progress-status {
-            position: relative;
-            line-height: 4vh;
-            font-size: 4vh;
-            margin-top: -2vh;
-            text-shadow: 0px 0px 3px whitesmoke;
-            z-index: 10 !important;
-            color: rgb(251, 251, 251);
-            width: 100%;
-            text-align: center;
-        }
 
         #client {
             --color: rgba(32, 102, 82, 1);
             width: 100%;
         }
 
-        #client svg {
+        .client,
+        .loading {
+            overflow: hidden !important;
+        }
+
+
+        @media (orientation: portrait) {
+
+            #report {
+                position: absolute;
+
+                width: 20vh;
+                /* height: 4.35vh; */
+                aspect-ratio: 9 / 2  !important;
+                top: 84vh;
+                background-color: rgba(255, 201, 137, 0.50);
+                background-image: url('/clear.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                color: rgba(255, 191, 67, 1);
+                font-size: 3vh;
+                display: none;
+            }
+
+            #client img {
             position: absolute;
-            top: 8.8vh;
-            left: 94.5vw;
-            transform: scale(3);
+            width: 5vh;
+            height: auto;
+            top: 6vh;
+            left: 88vw;
+            /* transform: scale(3); */
             color: var(--color);
         }
 
-        .client {
-            position: absolute;
-            top: 6.6vh;
-            margin-left: 8.8vw;
-            margin-right: 8.8vw;
-            border: 0.5vh solid var(--color);
-            width: 82.5vw;
-            height: 82vh;
-            box-shadow: inset 0 0 1vh 1vh var(--color);
-            background-color: black;
-            overflow: hidden;
-        }
-
-        .myserver-bottom {
-            position: absolute;
-            bottom: 1vh;
-        }
-
-        @media screen and (max-width: 1350px) {
-            .report {
-                position: absolute;
-                width: 25vw;
-                height: 4.35vh;
-                top: 80vh;
-                font-size: 3.4vh;
-                display: none;
-            }
-
-            .clear {
-                font-size: 1rem;
-                width: 17.5vw;
-                height: 3.2vh;
-            }
-
-            .client {
-                top: 10vh;
-                bottom: 21vh;
-            }
-
-            .loading h1 {
-                margin-top: -2vh;
-                margin-bottom: -2vh;
-                font-size: 5vw;
-            }
-        }
-
-        @media screen and (max-width: 1090px) {
-
             .layout {
-                width: 65vw;
-                height: 57vh;
-                margin-bottom: 3vh;
-            }
-
-            .layout__after::before {
-                content: '';
                 position: relative;
-                width: 65vw;
-                height: 57vh;
+
+                width: 65.8vw;
+                height: 65.2vh;
+                --path: 0% 0%,
+                    42.5% 0%,
+                    45% 2.5%,
+                    55% 2.5%,
+                    57.5% 0%,
+                    100% 0%,
+                    100% 100%,
+                    57.5% 100%,
+                    55% 97.5%,
+                    45% 97.5%,
+                    42.5% 100%,
+                    0% 100%;
+                clip-path: polygon(var(--path));
             }
 
-    
+            .layout__after {
+                position: absolute;
+
+                top: 1vh;
+                bottom: 1vh;
+                left: 1vw;
+                right: 1vw;
+
+                --path: 0% 0%,
+                    42.5% 0%,
+                    45% 2.5%,
+                    55% 2.5%,
+                    57.5% 0%,
+                    100% 0%,
+                    100% 100%,
+                    57.5% 100%,
+                    55% 97.5%,
+                    45% 97.5%,
+                    42.5% 100%,
+                    0% 100%;
+                clip-path: polygon(var(--path));
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%,
+                        rgba(0, 0, 0, 0.33) 50%,
+                        rgba(74, 118, 116, 0.5) 100%);
+            }
+
+            .layout_wrapper {
+
+                position: absolute;
+                top: 14.75vh;
+                right: 18.2vw;
+                bottom: 20.05vh;
+                left: 16vw;
+                width: 65.8vw;
+                height: 65.2vh;
+
+            }
+
             .loading h1 {
-                margin-top: -2vh;
-                margin-bottom: -2vh;
+                margin-top: 16vh;
+                width: 100%;
+                font-weight: 900;
+                text-align: center;
                 font-size: 5vw;
             }
 
-            .client {
-                width: 75vw;
-                height: 75vh;
+            .progress-bar {
+                margin-top: 2.2vh;
+                width: 100%;
+                height: 2vh;
             }
 
-            #client svg {
-                left: 90vw
+            .line-wrapper {
+                width: 62%;
+                margin: 0 19%;
             }
 
-            .error h1 {
-                line-height: 3vh;
-                font-size: 7vw;
+            .progress-line {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 10vh;
+                background: linear-gradient(90deg, rgba(255, 252, 2, 0) 0%,
+                        rgba(255, 252, 2, 0) 100%);
             }
 
-            .error p {
-                line-height: 2vh;
-                margin-top: 0.1vh;
+            .the-line {
+                z-index: 2;
+                width: auto;
+                height: 1.75vh;
+                background-color: rgb(255, 252, 2);
             }
 
-            .report {
-                width: 25vh;
-                height: 4.35vh;
-                top: 80vh;
-                font-size: 3.4vh;
-                display: none;
+            .the-line-back {
+                z-index: 1;
+                width: auto;
+                height: 1.75vh;
+                background-color: rgb(18, 19, 22);
+            }
+
+            .line-row {
+                display: flex;
+                width: auto;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .progress-status {
+                position: relative;
+                /* line-height: 4vh; */
+                font-size: 3vw;
+                margin-top: -1.5vh;
+                letter-spacing: 0.1vw;
+                text-shadow: 0px 0px 3px whitesmoke;
+                z-index: 10 !important;
+                color: rgb(251, 251, 251);
+                width: 100%;
+                text-align: center;
+            }
+
+            .myserver {
+                position: absolute;
+                top: 14vh;
+                margin-bottom: 0.25vh;
+                line-height: 2.5vh;
+                font-size: 2.5vh;
+                width: 100%;
+                text-align: center;
+                color: rgba(9, 217, 255, 1);
+            }
+
+            #arrows {
+                height: 7.5vh;
+            }
+
+            .animation {
+                margin-top: 3vh;
             }
 
             .clear {
-                font-size: 1rem;
-                width: 15vw;
-                height: 3vw;
+                background-image: url(./clear.png) !important;
+                background-size: contain !important;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                font-size: 2vh;
                 bottom: 0;
-                margin: 0;
+                width: 15vh;
+                /* height: 3.5vh; */
+                aspect-ratio: 9 / 2 !important;
+                right: 0.5vw;
+                color: rgba(153, 153, 153, 1);
             }
 
-            .myserver {
-                margin-top: 7%;
-            }
-        }
+            footer {
+                position: absolute;
+                top: 95%;
+                height: 4%;
 
-        @media screen and (max-width: 1090px) and (orientation: landscape) {
-            .loading h1 {
-                margin-top: -2vh;
-                margin-bottom: -2vh;
-            }
-        }
-
-        @media screen and (max-width: 675px) {
-
-            .myserver {
-                margin-top: 30%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
             }
 
+            .build {
+                position: absolute;
 
-            .report {
-                width: 25vh;
-                height: 4.35vh;
-                top: 80vh;
-                font-size: 3.4vh;
-                display: none;
+                left: 1vw;
+                top: 0.5vh;
+            }
+
+            .build p {
+                font-size: 1em;
+                line-height: 1em;
+                z-index: 10;
+                color: rgba(77, 54, 80, 0.44);
+                text-shadow: 0 0 1px white;
+            }
+
+            .report,
+            .clear {
+                background: transparent;
+                color: whitesmoke;
+                cursor: pointer;
+            }
+
+            .clear:hover {
+                box-shadow: 0 0 1vh 0.5vh whitesmoke;
+                cursor: pointer;
+            }
+
+            .client {
+                position: absolute;
+                top: 6.6vh;
+                left: 9vw;
+                right: 15vw;
+                border: 0.5vh solid var(--color);
+                width: 76vw;
+                height: 82vh;
+                box-shadow: inset 0 0 1vh 1vh var(--color);
+                background-color: black;
+                overflow: hidden;
             }
 
             .myserver-bottom {
                 position: absolute;
-                margin: 0;
-                top: 5vh;
+                top: 92.5vh;
+                bottom: 5vh;
             }
 
-
-            .clear {
-                font-size: 1rem;
-                margin-bottom: 1.5%;
-                width: 17.5vh;
-                height: 3.2vh;
+            #error h1 {
+                text-align: center;
+                font-size: 5vh;
+                margin-bottom: 1vh;
             }
 
-            #client svg {
-                top: 10vh;
-                right: 5vw;
-                transform: scale(1.5);
-                color: var(--color);
+            .report {
+                position: absolute;
+                width: 12.5vw;
+                height: 4.35vh;
+                top: 84vh;
+                background-color: rgba(255, 201, 137, 0.50);
+                color: rgba(255, 191, 67, 1);
+                font-size: 3.4vh;
+                display: none;
             }
 
-            .loading h1 {
-                margin-top: -2vh;
-                margin-bottom: -2vh;
-                font-size: 5vw;
-            }
-
-            .progress-status {
-                font-size: 5vw;
-            }
-
-        }
-
-        @media (orientation: landscape) {
-
-            h1 {
-                font-size: 5vh !important;
-            }
-
-            .loading h1 {
-
-                margin-bottom: -4vh;
-            }
-
-            .error p {
-                font-size: 1vw;
-                line-height: 1.5vw;
-            }
-
-            .animation {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                animation-name: spin !important;
-                animation-duration: 1111ms;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                margin-bottom: -3vh;
-                margin-top: 1vh;
-            }
-
-            #client svg {
-                top: 14vh;
-            }
-
-            .client {
-                height: 75vh;
-            }
-
-        }
-
-        @media screen and (min-width: 1090px) and (orientation: landscape) {
-
-
-            #client svg {
-                top: 4vw;
-            }
-
-        }
-
-        .client,
-        .loading {
-            overflow: hidden !important;
         }
     </style>
 
@@ -563,94 +687,97 @@
 
             <div class="client client-color"></div>
 
-            <svg style="width:24px;height:24px;">
-                <path fill="currentColor"
-                    d="M9.5,13.09L10.91,14.5L6.41,19H10V21H3V14H5V17.59L9.5,13.09M10.91,9.5L9.5,10.91L5,6.41V10H3V3H10V5H6.41L10.91,9.5M14.5,13.09L19,17.59V14H21V21H14V19H17.59L13.09,14.5L14.5,13.09M13.09,9.5L17.59,5H14V3H21V10H19V6.41L14.5,10.91L13.09,9.5Z" />
-            </svg>
-
+            <img id="fullscreen" src="./fs.png" alt="fullscreen">
         </div>
 
         <div class="myserver">myserver.io</div>
 
-        <div class="layout" id="layout">
+        <div class="layout_wrapper">
 
-            <div class="loading loading-color">
+            <div class="layout" id="layout">
 
-                <h1>DOWNLOADING...</h1>
+                <div class="layout__after">
 
-                <div class="animation">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="156" height="156">
-                        <svg id="arrows" style="width:24px;height:24px" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12,6V9L16,5L12,1V4A8,8 0 0,0 4,12C4,13.57 4.46,15.03 5.24,16.26L6.7,14.8C6.25,13.97 6,13 6,12A6,6 0 0,1 12,6M18.76,7.74L17.3,9.2C17.74,10.04 18,11 18,12A6,6 0 0,1 12,18V15L8,19L12,23V20A8,8 0 0,0 20,12C20,10.43 19.54,8.97 18.76,7.74Z" />
-                        </svg>
-                    </svg>
-                </div>
+                    <div class="loading loading-color">
 
-                <div class="progress-bar">
+                        <h1>DOWNLOADING...</h1>
 
-                    <div class="line-wrapper">
+                        <div class="animation">
+                            <img id="arrows" src="./la.png" alt="arrows">
+                        </div>
 
-                        <div class="line-row">
+                        <div class="progress-bar">
 
-                            <div class="progress-line">
+                            <div class="line-wrapper">
 
-                                <div class="the-line"></div>
+                                <div class="line-row">
+
+                                    <div class="progress-line">
+
+                                        <div class="the-line"></div>
+
+                                    </div>
+
+                                    <div class="the-line-back"></div>
+
+                                </div>
 
                             </div>
 
-                            <div class="the-line-back"></div>
+                            <div class="progress-status">125.1Mb/150 [83%]</div>
 
                         </div>
 
                     </div>
 
-                    <div class="progress-status">125.1Mb/150 [83%]</div>
+                    <div id="error" class="error error-color">
+                        <h1>ERROR 404</h1>
+                        <p>
+                            Actor] : Large Actor casts a shadow and will cause an extreme performance hit unless
+                            buseBooleanEnvironmentShadowing is set to true
+                        </p>
+                        <p>
+                            A large Actor has been set to cast shadows-this will cause extreme performance issues and
+                            should
+                            have buseBooleanEnvironment Shadowing set to true,
+                        </p>
+                        <p>(Volume) causes damage, but has no damagetype defined
+                        </p>
+                        <p>This warning is caused when there is a volume that is set to cause damage but does not have a
+                            damage
+                            type defined. A damage type is important because it tells the game code how to handle a
+                            Actor's
+                            reaction to taking damage. This can be solved by going to the Actor's Property
+                            Window-Physics
+                            Volume
+                            and setting the 'DamageType' property.
+                        </p>
+                        <p>[Actor]: Brush has non-coplanar polygons
+                        </p>
+                        <p>This warning is caused when there is a brush in the level that has non-coplanar polygons.
+                            This is
+                            usually caused by using brush editing tools in geometry mode in extreme ways and can cause
+                            missing
+                            polygons in the level. This warning can be resolved by deleting the brush and recreating it.
+                        </p>
+                        <p>[Actor] in same location as (Another Actor]
+                        </p>
+                        <p>This warning is caused when there is an Actor that is in the same exact location as another
+                            Actor.
+                            This warning is usually the result of an accidental duplication or paste operation. It can
+                            be
+                            fixed
+                            by deleting one of the Actors, or disregarded if the placement was intentional.
+                        </p>
+                        <p>[Actor) has invalid DrawScale/ DrawScale3D
+                            send report</p>
+                    </div>
 
                 </div>
 
             </div>
 
-            <div id="error" class="error error-color">
-                <h1>ERROR 404</h1>
-                <p>
-                    Actor] : Large Actor casts a shadow and will cause an extreme performance hit unless
-                    buseBooleanEnvironmentShadowing is set to true
-                </p>
-                <p>
-                    A large Actor has been set to cast shadows-this will cause extreme performance issues and should
-                    have buseBooleanEnvironment Shadowing set to true,
-                </p>
-                <p>(Volume) causes damage, but has no damagetype defined
-                </p>
-                <p>This warning is caused when there is a volume that is set to cause damage but does not have a
-                    damage
-                    type defined. A damage type is important because it tells the game code how to handle a Actor's
-                    reaction to taking damage. This can be solved by going to the Actor's Property Window-Physics
-                    Volume
-                    and setting the 'DamageType' property.
-                </p>
-                <p>[Actor]: Brush has non-coplanar polygons
-                </p>
-                <p>This warning is caused when there is a brush in the level that has non-coplanar polygons. This is
-                    usually caused by using brush editing tools in geometry mode in extreme ways and can cause
-                    missing
-                    polygons in the level. This warning can be resolved by deleting the brush and recreating it.
-                </p>
-                <p>[Actor] in same location as (Another Actor]
-                </p>
-                <p>This warning is caused when there is an Actor that is in the same exact location as another
-                    Actor.
-                    This warning is usually the result of an accidental duplication or paste operation. It can be
-                    fixed
-                    by deleting one of the Actors, or disregarded if the placement was intentional.
-                </p>
-                <p>[Actor) has invalid DrawScale/ DrawScale3D
-                    send report</p>
-            </div>
-
         </div>
-
 
         <button id="report" class="report">send report</button>
 
@@ -698,6 +825,8 @@
             function client() {
                 document.getElementsByClassName('wrapper')[0].classList.remove('loading-wrapper')
                 document.getElementsByClassName('loading')[0].style.display = 'none'
+                document.getElementsByClassName('layout_wrapper')[0].style.display = 'none'
+
                 document.getElementById('layout').classList.remove('layout__after')
 
                 let client_data = true
@@ -719,6 +848,7 @@
             function error_emit() {
                 document.getElementsByClassName('wrapper')[0].classList.add('error-wrapper')
                 document.getElementById('layout').classList.add('layout__after')
+                document.getElementsByClassName('layout_wrapper')[0].style.display = 'flex'
                 document.getElementById('client').style.display = 'none'
                 document.getElementsByClassName('myserver')[0].classList.remove('myserver-bottom')
 
